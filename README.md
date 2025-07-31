@@ -25,10 +25,10 @@ Owner: Number of previous owners.
 The dataset contains 301 entries and 9 columns, with no missing values, ensuring a clean starting point for analysis.
 Link For DataSet : https://www.kaggle.com/datasets/vijayaadithyanvg/car-price-predictionused-cars
 
-Project Workflow and Problem-Solving Approach:
+#### Project Workflow and Problem-Solving Approach
 This project tackles the car price prediction problem using a standard machine learning regression workflow, implemented entirely in Python. The key steps involved are:
 
-Data Loading and Initial Inspection:
+##### Data Loading and Initial Inspection
 We begin by loading the dataset into a Pandas DataFrame. Initial checks are performed to understand the data's structure, identify data types, and confirm the absence of missing values, ensuring data quality. We also examine the distribution of categorical features.
 
 Encoding the Data: 
