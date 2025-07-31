@@ -1,16 +1,16 @@
 # CodeAlpha_Car-Price-Prediction-with-Machine-Learning
 
-#### Overview : 
+#### Overview 
 This repository hosts a machine learning project focused on predicting the selling price of used cars based on various features. In the dynamic automotive market, accurate price prediction is invaluable for both buyers and sellers. This project aims to build a robust regression model capable of estimating a car's selling price, thereby assisting in informed decision-making. We leverage a dataset containing various car attributes to train and evaluate our models.
 
-Key Features & Libraries Used:
+#### Key Features & Libraries Used:
 Data Manipulation & Analysis: pandas, numpy
 Data Visualization: matplotlib.pyplot, seaborn
 Machine Learning Models: sklearn.linear_model.LinearRegression, sklearn.linear_model.Lasso
 Model Evaluation: sklearn.model_selection.train_test_split, sklearn.metrics (R-squared, MAE, MSE, RMSE)
 Predictive System: Demonstrates how to make predictions on new data.
 
-Dataset:
+#### Dataset
 The dataset used in this project (car.data.csv) contains historical information about various used cars. Key attributes include:
 Car_Name: Name of the car model.
 Year: Manufacturing year.
