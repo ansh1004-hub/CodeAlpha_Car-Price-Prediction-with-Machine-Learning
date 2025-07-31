@@ -1,6 +1,6 @@
 # CodeAlpha_Car-Price-Prediction-with-Machine-Learning
 
-Overview
+### Overview
 This repository hosts a machine learning project focused on predicting the selling price of used cars based on various features. In the dynamic automotive market, accurate price prediction is invaluable for both buyers and sellers. This project aims to build a robust regression model capable of estimating a car's selling price, thereby assisting in informed decision-making. We leverage a dataset containing various car attributes to train and evaluate our models.
 
 Key Features & Libraries Used:
@@ -80,10 +80,9 @@ How to Make New Predictions
 You can use the trained lass_reg_model (or lin_reg_model) to predict the selling price of a new car. Ensure the input data is a NumPy array with 7 features in the correct order: Year, Present_Price, Driven_kms, Fuel_Type (0=Petrol, 1=Diesel, 2=CNG), Selling_type (0=Dealer, 1=Individual), Transmission (0=Manual, 1=Automatic), Owner.
 
 import numpy as np
-
-# Example new car data: 2018 model, Present Price 7.5 Lakhs, Driven 30000 kms, Petrol, Dealer, Manual, 0 owners
+Example new car data :  2018 model, Present Price 7.5 Lakhs, Driven 30000 kms, Petrol, Dealer, Manual, 0 owners
 new_car_data = np.array([[2018, 7.5, 30000, 0, 0, 0, 0]])
 
-# Using the Lasso Regression model for prediction
+Using the Lasso Regression model for prediction
 predicted_price = lass_reg_model.predict(new_car_data)
 print(f"Predicted Selling Price using Lasso Regression: {predicted_price[0]:.2f} Lakhs")
