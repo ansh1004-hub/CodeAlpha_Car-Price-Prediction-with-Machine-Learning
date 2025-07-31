@@ -31,16 +31,17 @@ This project tackles the car price prediction problem using a standard machine l
 ##### Data Loading and Initial Inspection
 We begin by loading the dataset into a Pandas DataFrame. Initial checks are performed to understand the data's structure, identify data types, and confirm the absence of missing values, ensuring data quality. We also examine the distribution of categorical features.
 
-Encoding the Data: 
+##### Encoding the Data
 Categorical features (Fuel_Type, Selling_type, Transmission) are converted into numerical representations using manual encoding. This approach was chosen for simplicity due to the small, fixed number of categories, avoiding the creation of many new columns.
 
-Splitting the Data:
+##### Splitting the Data
 The dataset is divided into training and testing sets (80% training, 20% testing) using a fixed random_state for reproducibility. The Car_Name column is dropped as it's a unique identifier and not directly useful as a numerical feature for prediction in this context.
 
-Model Training (Linear Regression & Lasso Regression):
+##### Model Training (Linear Regression & Lasso Regression)
 Two regression models, Linear Regression and Lasso Regression, are trained on the prepared training data. Linear Regression models linear relationships, while Lasso Regression adds regularization to prevent overfitting by shrinking less important feature coefficients.
 
-Model Evaluation: The performance of both trained models is rigorously assessed using several key regression metrics:
+##### Model Evaluation
+The performance of both trained models is rigorously assessed using several key regression metrics:
 R-squared: Measures the proportion of variance in car selling prices explained by the models.
 Mean Absolute Error (MAE): Provides the average magnitude of errors in predictions.
 Mean Squared Error (MSE): Penalizes larger errors more heavily.
@@ -51,13 +52,13 @@ Predictive System: Finally, the trained models are used to predict sales for new
 
 By following this systematic approach, we aim to build an effective and interpretable car price prediction model that can serve as a valuable tool for both buyers and sellers.
 
-How to Run the Project
-Clone the Repository:
+#### How to Run the Project
+#####Clone the Repository
 
 git clone https://github.com/YOUR_USERNAME/Car-Price-Prediction-Project.git
 cd Car-Price-Prediction-Project
 
-Install Dependencies:
+#####Install Dependencies
 It's recommended to use a virtual environment.
 
 pip install pandas numpy matplotlib seaborn scikit-learn
@@ -68,21 +69,23 @@ jupyter notebook SourceCode_CarPricePrediction.ipynb
 
 Open SourceCode_CarPricePrediction.ipynb in your browser and run all cells.
 
-Interpretation of Metrics
-R-squared: Both models show high R-squared values on both training and test sets. This indicates that a large proportion of the variance in car selling prices can be explained by our features. The slight drop from training to test is normal and suggests good generalization.
+#### Interpretation of Metrics
+##### R-squared
+Both models show high R-squared values on both training and test sets. This indicates that a large proportion of the variance in car selling prices can be explained by our features. The slight drop from training to test is normal and suggests good generalization.
 
-MAE, MSE, RMSE: These metrics quantify the average error. For Linear Regression, the RMSE on the test set is approximately 1.71 Lakhs. For Lasso, it's approximately 1.66 Lakhs. This means, on average, our model's predictions are off by about 1.6-1.7 Lakhs from the actual selling price.
+##### MAE, MSE, RMSE 
+These metrics quantify the average error. For Linear Regression, the RMSE on the test set is approximately 1.71 Lakhs. For Lasso, it's approximately 1.66 Lakhs. This means, on average, our model's predictions are off by about 1.6-1.7 Lakhs from the actual selling price.
 
-Model Choice
+#### Model Choice
 Comparing Linear Regression and Lasso Regression, Lasso Regression shows slightly better performance on the test set (higher R-squared, lower MAE, MSE, RMSE). This suggests that Lasso's regularization, which helps prevent overfitting by shrinking less important feature coefficients, is beneficial for this dataset. Therefore, the Lasso Regression model is slightly preferred for this prediction task.
 
-How to Make New Predictions
+#### How to Make New Predictions
 You can use the trained lass_reg_model (or lin_reg_model) to predict the selling price of a new car. Ensure the input data is a NumPy array with 7 features in the correct order: Year, Present_Price, Driven_kms, Fuel_Type (0=Petrol, 1=Diesel, 2=CNG), Selling_type (0=Dealer, 1=Individual), Transmission (0=Manual, 1=Automatic), Owner.
 
 import numpy as np
-Example new car data :  2018 model, Present Price 7.5 Lakhs, Driven 30000 kms, Petrol, Dealer, Manual, 0 owners
+##### Example new car data :  2018 model, Present Price 7.5 Lakhs, Driven 30000 kms, Petrol, Dealer, Manual, 0 owners
 new_car_data = np.array([[2018, 7.5, 30000, 0, 0, 0, 0]])
 
-Using the Lasso Regression model for prediction
+##### Using the Lasso Regression model for prediction
 predicted_price = lass_reg_model.predict(new_car_data)
 print(f"Predicted Selling Price using Lasso Regression: {predicted_price[0]:.2f} Lakhs")
