@@ -3,14 +3,14 @@
 Overview
 This repository hosts a machine learning project focused on predicting the selling price of used cars based on various features. In the dynamic automotive market, accurate price prediction is invaluable for both buyers and sellers. This project aims to build a robust regression model capable of estimating a car's selling price, thereby assisting in informed decision-making. We leverage a dataset containing various car attributes to train and evaluate our models.
 
-Key Features & Libraries Used
+Key Features & Libraries Used:
 Data Manipulation & Analysis: pandas, numpy
 Data Visualization: matplotlib.pyplot, seaborn
 Machine Learning Models: sklearn.linear_model.LinearRegression, sklearn.linear_model.Lasso
 Model Evaluation: sklearn.model_selection.train_test_split, sklearn.metrics (R-squared, MAE, MSE, RMSE)
 Predictive System: Demonstrates how to make predictions on new data.
 
-Dataset
+Dataset:
 The dataset used in this project (car.data.csv) contains historical information about various used cars. Key attributes include:
 Car_Name: Name of the car model.
 Year: Manufacturing year.
@@ -25,19 +25,20 @@ Owner: Number of previous owners.
 The dataset contains 301 entries and 9 columns, with no missing values, ensuring a clean starting point for analysis.
 Link For DataSet : https://www.kaggle.com/datasets/vijayaadithyanvg/car-price-predictionused-cars
 
-Project Structure
-The repository is organized as follows:
-
-Project Workflow and Problem-Solving Approach
+Project Workflow and Problem-Solving Approach:
 This project tackles the car price prediction problem using a standard machine learning regression workflow, implemented entirely in Python. The key steps involved are:
 
-Data Loading and Initial Inspection: We begin by loading the dataset into a Pandas DataFrame. Initial checks are performed to understand the data's structure, identify data types, and confirm the absence of missing values, ensuring data quality. We also examine the distribution of categorical features.
+Data Loading and Initial Inspection:
+We begin by loading the dataset into a Pandas DataFrame. Initial checks are performed to understand the data's structure, identify data types, and confirm the absence of missing values, ensuring data quality. We also examine the distribution of categorical features.
 
-Encoding the Data: Categorical features (Fuel_Type, Selling_type, Transmission) are converted into numerical representations using manual encoding. This approach was chosen for simplicity due to the small, fixed number of categories, avoiding the creation of many new columns.
+Encoding the Data: 
+Categorical features (Fuel_Type, Selling_type, Transmission) are converted into numerical representations using manual encoding. This approach was chosen for simplicity due to the small, fixed number of categories, avoiding the creation of many new columns.
 
-Splitting the Data: The dataset is divided into training and testing sets (80% training, 20% testing) using a fixed random_state for reproducibility. The Car_Name column is dropped as it's a unique identifier and not directly useful as a numerical feature for prediction in this context.
+Splitting the Data:
+The dataset is divided into training and testing sets (80% training, 20% testing) using a fixed random_state for reproducibility. The Car_Name column is dropped as it's a unique identifier and not directly useful as a numerical feature for prediction in this context.
 
-Model Training (Linear Regression & Lasso Regression): Two regression models, Linear Regression and Lasso Regression, are trained on the prepared training data. Linear Regression models linear relationships, while Lasso Regression adds regularization to prevent overfitting by shrinking less important feature coefficients.
+Model Training (Linear Regression & Lasso Regression):
+Two regression models, Linear Regression and Lasso Regression, are trained on the prepared training data. Linear Regression models linear relationships, while Lasso Regression adds regularization to prevent overfitting by shrinking less important feature coefficients.
 
 Model Evaluation: The performance of both trained models is rigorously assessed using several key regression metrics:
 R-squared: Measures the proportion of variance in car selling prices explained by the models.
